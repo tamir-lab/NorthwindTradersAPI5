@@ -103,7 +103,7 @@ public class JdbcProductDao implements IProductDao {
     @Override
     public void update(int productId, Product product) {
         // This method updates an existing product in the database.
-        String updateDataQuery = "UPDATE categories SET ProductName = ? WHERE productId = ?";
+        String updateDataQuery = "UPDATE products SET ProductName = ? WHERE productId = ?";
         try (Connection connection = dataSource.getConnection();
              PreparedStatement updateStatement = connection.prepareStatement(updateDataQuery)) {
             // Setting parameters for the update query.
